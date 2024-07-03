@@ -1,0 +1,4 @@
+name: SpwanPointProtect
+version: '${version}'
+main: com.tinyshellzz.spwanpointprotect.SpwanPointProtect
+api-version: '1.20'
