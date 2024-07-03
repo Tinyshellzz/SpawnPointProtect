@@ -1,4 +1,4 @@
-package com.tinyshellzz.spawnpointprotect.utils;
+package com.tinyshellzz.spawnpointprotect.command;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
