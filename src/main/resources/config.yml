@@ -1,5 +1,5 @@
 #配置主世界以及下界ab点位，修改完请用指令/spp reload重载
-zhushijie:
+world:
   a:
     x: 500
     y: 300
@@ -11,7 +11,7 @@ zhushijie:
     z: -500
     world: world
 
-xiajie:
+world_nether:
   a:
     x: 62.5
     y: 300

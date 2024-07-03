@@ -10,3 +10,10 @@ commands:
   spawnpointprotect:
     description: Reloads the configuration file.
     usage: /spawnpointprotect reload
+commands:
+  spp:
+    description: Reloads the configuration file.
+    usage: /spp reload
+  spawnpointprotect:
+    description: Reloads the configuration file.
+    usage: /spawnpointprotect reload

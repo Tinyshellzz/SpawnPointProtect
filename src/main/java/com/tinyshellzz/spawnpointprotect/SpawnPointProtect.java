@@ -28,10 +28,10 @@ public final class SpawnPointProtect extends JavaPlugin {
         reloadConfig(); // 重新加载配置文件
 
         // 从配置文件中读取坐标点位
-        Config.loc_a = getLocationFromConfig("zhushijie.a");
-        Config.loc_b = getLocationFromConfig("zhushijie.b");
-        Config.nether_loc_a = getLocationFromConfig("xiajie.a");
-        Config.nether_loc_b = getLocationFromConfig("xiajie.b");
+        Config.loc_a = getLocationFromConfig("world.a");
+        Config.loc_b = getLocationFromConfig("world.b");
+        Config.nether_loc_a = getLocationFromConfig("world_nether.a");
+        Config.nether_loc_b = getLocationFromConfig("world_nether.b");
     }
 
     private Location getLocationFromConfig(String path) {
