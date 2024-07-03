@@ -24,12 +24,7 @@ public class Tools {
                 max(a.getX(), b.getX()),
                 max(a.getY(), b.getY()),
                 max(a.getZ(), b.getZ()));
-        Bukkit.getConsoleSender().sendMessage((min_loc.getX() <= loc.getX()
-                && min_loc.getY() <= loc.getY()
-                && min_loc.getZ() <= loc.getZ()
-                && max_loc.getX() >= loc.getX()
-                && max_loc.getY() >= loc.getY()
-                && max_loc.getZ() >= loc.getZ()) + "");
+
         return (min_loc.getX() <= loc.getX()
                 && min_loc.getY() <= loc.getY()
                 && min_loc.getZ() <= loc.getZ()

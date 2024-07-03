@@ -21,7 +21,7 @@ public class BlockBreakListener implements Listener {
             // 如果玩家拥有 "group.op" 权限组，不再检查游玩时长
             return;
         }
-        Bukkit.getConsoleSender().sendMessage(p.getStatistic(Statistic.PLAY_ONE_MINUTE) + "");
+
         int playTime = p.getStatistic(Statistic.PLAY_ONE_MINUTE) / 72000; // 获取玩家的总游玩时长，单位为小时
         if (playTime > 100) return;     // 游玩时间大于100小时，则不保护
 
