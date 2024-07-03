@@ -3,7 +3,7 @@ package com.tinyshellzz.spawnpointprotect;
 import com.tinyshellzz.spawnpointprotect.config.Config;
 import com.tinyshellzz.spawnpointprotect.lisenter.BlockBreakListener;
 import com.tinyshellzz.spawnpointprotect.lisenter.BlockPlaceListener;
-import com.tinyshellzz.spawnpointprotect.utils.ReloadCommandExecutor;
+import com.tinyshellzz.spawnpointprotect.command.ReloadCommandExecutor;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.plugin.java.JavaPlugin;
