@@ -3,3 +3,10 @@ version: '${version}'
 main: com.tinyshellzz.spawnpointprotect.SpawnPointProtect
 api-version: '1.20'
 folia-supported: true
+commands:
+  spp:
+    description: Reloads the configuration file.
+    usage: /spp reload
+  spawnpointprotect:
+    description: Reloads the configuration file.
+    usage: /spawnpointprotect reload
