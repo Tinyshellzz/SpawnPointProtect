@@ -28,13 +28,13 @@ public class BlockPlaceListener implements Listener {
         if (loc.getWorld().getName().equals("world")){
             if (Tools.inArea(loc, Config.loc_a, Config.loc_b)) {
                 event.setCancelled(true);
-                p.sendMessage(ChatColor.RED + "呜呜，在线时长达到100h后开放主城建造资格");
+                p.sendMessage(ChatColor.RED + Config.Message_world);
             } return;
         }
         if (loc.getWorld().getName().equals("world_nether")){
             if (Tools.inArea(loc, Config.nether_loc_a, Config.nether_loc_b)) {
                 event.setCancelled(true);
-                p.sendMessage(ChatColor.RED + "呜呜，在线时长达到100h后开放主城建造资格");
+                p.sendMessage(ChatColor.RED + Config.Message_world_nether);
             }
         }
 

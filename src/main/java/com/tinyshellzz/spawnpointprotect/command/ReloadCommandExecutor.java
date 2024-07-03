@@ -1,5 +1,6 @@
 package com.tinyshellzz.spawnpointprotect.command;
 
+import com.tinyshellzz.spawnpointprotect.config.Config;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -17,7 +18,9 @@ public class ReloadCommandExecutor implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 1 && args[0].equalsIgnoreCase("reload")) {
             plugin.reloadConfig();
-            sender.sendMessage(ChatColor.GREEN + "spp配置文件已重新加载！");
+            Config.Message_world = plugin.getConfig().getString("message_world"); // 更新自定义消息
+            Config.Message_world_nether = plugin.getConfig().getString("message_world_nether"); // 更新自定义消息
+            sender.sendMessage(ChatColor.GREEN + "【spp】配置文件已重新加载！");
             return true;
         }
         return false;

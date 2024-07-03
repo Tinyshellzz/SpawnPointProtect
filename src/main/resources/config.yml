@@ -1,24 +1,30 @@
 #配置主世界以及下界ab点位，修改完请用指令/spp reload重载
 world:
   a:
-    x: 500
-    y: 300
-    z: 500
+    x: 512
+    y: 320
+    z: 512
     world: world
   b:
-    x: -500
-    y: 0
-    z: -500
+    x: -512
+    y: -64
+    z: -512
     world: world
 
 world_nether:
   a:
-    x: 62.5
-    y: 300
-    z: 62.5
+    x: 64
+    y: 256
+    z: 64
     world: world_nether
   b:
-    x: -62.5
+    x: -64
     y: 0
-    z: -62.5
+    z: -64
     world: world_nether
+
+message_world: "呜呜，在线时长达到100h后开放主城建造资格(512x512)"
+#主世界通知语句
+
+message_world_nether: "呜呜，在线时长达到100h后开放主城建造资格(64x64)"
+#下界通知语句

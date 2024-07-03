@@ -32,6 +32,10 @@ public final class SpawnPointProtect extends JavaPlugin {
         Config.loc_b = getLocationFromConfig("world.b");
         Config.nether_loc_a = getLocationFromConfig("world_nether.a");
         Config.nether_loc_b = getLocationFromConfig("world_nether.b");
+
+        // 从配置文件中读取自定义消息
+        Config.Message_world = getConfig().getString("message_world");
+        Config.Message_world_nether = getConfig().getString("message_world_nether");
     }
 
     private Location getLocationFromConfig(String path) {
