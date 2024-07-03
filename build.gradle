@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'java-library'
 }
 
 group = 'com.tinyshellzz'
@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-compileOnly "org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT"
+    compileOnly "org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT"
 }
 
 def targetJavaVersion = 17
@@ -29,6 +29,10 @@ java {
     if (JavaVersion.current() < javaVersion) {
         toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
     }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
 }
 
 tasks.withType(JavaCompile).configureEach {
