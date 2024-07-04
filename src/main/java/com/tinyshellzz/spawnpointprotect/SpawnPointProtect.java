@@ -14,7 +14,7 @@ public final class SpawnPointProtect extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         Bukkit.getConsoleSender().sendMessage("+++++++++++++++++++++++++++++");
-        loadConfig(); // 加载配置文件
+        init(); // 加载配置文件
         register();
     }
 
@@ -23,29 +23,11 @@ public final class SpawnPointProtect extends JavaPlugin {
         // Plugin shutdown logic
     }
 
-    public void loadConfig() {
-        saveDefaultConfig(); // 如果配置文件不存在，创建默认的 config.yml
-        reloadConfig(); // 重新加载配置文件
-
-        // 从配置文件中读取坐标点位
-        Config.loc_a = getLocationFromConfig("world.a");
-        Config.loc_b = getLocationFromConfig("world.b");
-        Config.nether_loc_a = getLocationFromConfig("world_nether.a");
-        Config.nether_loc_b = getLocationFromConfig("world_nether.b");
-
-        // 从配置文件中读取自定义消息
-        Config.Message_world = getConfig().getString("message_world");
-        Config.Message_world_nether = getConfig().getString("message_world_nether");
+    public void init() {
+        ObjectPool.plugin = this;
+        Config.reload();
     }
 
-    private Location getLocationFromConfig(String path) {
-        double x = getConfig().getDouble(path + ".x");
-        double y = getConfig().getDouble(path + ".y");
-        double z = getConfig().getDouble(path + ".z");
-        String worldName = getConfig().getString(path + ".world");
-
-        return new Location(Bukkit.getWorld(worldName), x, y, z);
-    }
 
     public void register() {
         // 注册 Listeners
