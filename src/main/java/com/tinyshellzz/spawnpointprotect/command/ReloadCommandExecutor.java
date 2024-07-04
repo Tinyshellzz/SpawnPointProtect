@@ -17,9 +17,7 @@ public class ReloadCommandExecutor implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 1 && args[0].equalsIgnoreCase("reload")) {
-            plugin.reloadConfig();
-            Config.Message_world = plugin.getConfig().getString("message_world"); // 更新自定义消息
-            Config.Message_world_nether = plugin.getConfig().getString("message_world_nether"); // 更新自定义消息
+            Config.reload();
             sender.sendMessage(ChatColor.GREEN + "【spp】配置文件已重新加载！");
             return true;
         }
