@@ -1,12 +1,14 @@
 package com.tinyshellzz.spawnpointprotect;
 
+import com.tinyshellzz.spawnpointprotect.command.CommandTabCompleter;
 import com.tinyshellzz.spawnpointprotect.config.Config;
 import com.tinyshellzz.spawnpointprotect.lisenter.BlockBreakListener;
 import com.tinyshellzz.spawnpointprotect.lisenter.BlockPlaceListener;
-import com.tinyshellzz.spawnpointprotect.command.ReloadCommandExecutor;
+import com.tinyshellzz.spawnpointprotect.command.CommandExecutor;
 import org.bukkit.Bukkit;
-import org.bukkit.Location;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.Objects;
 
 public final class SpawnPointProtect extends JavaPlugin {
 
@@ -34,8 +36,12 @@ public final class SpawnPointProtect extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
         this.getServer().getPluginManager().registerEvents(new BlockPlaceListener(), this);
 
-        // 注册 reload 命令
-        getCommand("spawnpointprotect").setExecutor(new ReloadCommandExecutor(this));
-        getCommand("spp").setExecutor(new ReloadCommandExecutor(this));
+        // 注册 spp 命令
+        getCommand("spawnpointprotect").setExecutor(new CommandExecutor(this));
+        getCommand("spp").setExecutor(new CommandExecutor(this));
+
+        // 注册命令补全器
+        Objects.requireNonNull(getCommand("spp")).setTabCompleter(new CommandTabCompleter(this));
     }
-}
+    }
+
