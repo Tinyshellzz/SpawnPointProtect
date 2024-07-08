@@ -1,7 +1,6 @@
 package com.tinyshellzz.spawnpointprotect.command;
 
 import com.tinyshellzz.spawnpointprotect.config.Config;
-import com.tinyshellzz.spawnpointprotect.utils.Tools;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -12,7 +11,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Objects;
 import java.util.Scanner;
 import java.util.UUID;
 
