@@ -31,4 +31,4 @@ message_world_nether: "呜呜，在线时长达到100h后开放主城建造资�
 
 #建造白名单，绕过主城保护
 whitelist:
-  YouaJing: "b33b6484-fb7a-4d63-b705-982f6ab35c5b"
+  YouaJing: b33b6484-fb7a-4d63-b705-982f6ab35c5b
