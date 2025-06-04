@@ -1,9 +1,7 @@
 package com.tinyshellzz.spawnpointprotect.utils;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
-
 import static java.lang.Math.max;
 import static java.lang.Math.min;
 
@@ -32,4 +30,5 @@ public class Tools {
                 && max_loc.getY() >= loc.getY()
                 && max_loc.getZ() >= loc.getZ());
     }
+
 }

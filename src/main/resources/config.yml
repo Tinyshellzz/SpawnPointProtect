@@ -23,8 +23,12 @@ world_nether:
     z: -64
     world: world_nether
 
-message_world: "呜呜，在线时长达到100h后开放主城建造资格(512x512)"
 #主世界通知语句
+message_world: "呜呜，在线时长达到100h后开放主城建造资格(512x512)"
 
-message_world_nether: "呜呜，在线时长达到100h后开放主城建造资格(64x64)"
 #下界通知语句
+message_world_nether: "呜呜，在线时长达到100h后开放主城建造资格(64x64)"
+
+#建造白名单，绕过主城保护
+whitelist:
+  YouaJing: b33b6484-fb7a-4d63-b705-982f6ab35c5b
