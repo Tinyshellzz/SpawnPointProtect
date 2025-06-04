@@ -1,1 +1,1 @@
-rootProject.name = "NeoTccInventoryManager"
+rootProject.name = "SpawnPointProtect"
