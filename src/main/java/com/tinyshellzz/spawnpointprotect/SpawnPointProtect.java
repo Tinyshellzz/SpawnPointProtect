@@ -5,6 +5,8 @@ import com.tinyshellzz.spawnpointprotect.config.Config;
 import com.tinyshellzz.spawnpointprotect.lisenter.BlockBreakListener;
 import com.tinyshellzz.spawnpointprotect.lisenter.BlockPlaceListener;
 import com.tinyshellzz.spawnpointprotect.command.CommandExecutor;
+import com.tinyshellzz.spawnpointprotect.lisenter.CreatureSpawnListener;
+import com.tinyshellzz.spawnpointprotect.lisenter.NoFireSpreadListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -35,6 +37,8 @@ public final class SpawnPointProtect extends JavaPlugin {
         // 注册 Listeners
         this.getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
         this.getServer().getPluginManager().registerEvents(new BlockPlaceListener(), this);
+        this.getServer().getPluginManager().registerEvents(new CreatureSpawnListener(), this);
+        this.getServer().getPluginManager().registerEvents(new NoFireSpreadListener(), this);
 
         // 注册 spp 命令
         getCommand("spawnpointprotect").setExecutor(new CommandExecutor(this));
